@@ -12,19 +12,21 @@ source:
   sha256: '{{ hash_value }}'
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install . --no-deps --ignore-installed
 
 requirements:
   build:
     - pip
+    - python
     - setuptools
     - setuptools_scm
 
   run:
     - pathlib2  # [py27]
-    - pytest-datadir >=1.2.0
     - pytest >=3.5.0
+    - pytest-datadir >=1.2.0
+    - python
     - pyyaml
     - six
 
