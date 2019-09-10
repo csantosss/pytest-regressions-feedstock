@@ -1,6 +1,6 @@
 {% set name = "pytest-regressions" %}
-{% set version = "1.0.6" %}
-{% set hash_value = "14165dd7a452f0637083855f67aafe6afa61013a541efd2dedc98b7da5dd3970" %}
+{% set version = "2.0.0" %}
+{% set hash_value = "38972758b6e62058df79bc8480d3e0f4134bb0be848c135d4840f3ebebb63985" %}
 
 package:
   name: '{{ name|lower }}'
