@@ -1,6 +1,6 @@
 {% set name = "pytest-regressions" %}
-{% set version = "1.0.5" %}
-{% set hash_value = "2684725f3e78c66a318a6f0b483ef5723dfa908e78f47cd441290f8c072dde2b" %}
+{% set version = "1.0.6" %}
+{% set hash_value = "14165dd7a452f0637083855f67aafe6afa61013a541efd2dedc98b7da5dd3970" %}
 
 package:
   name: '{{ name|lower }}'
@@ -12,7 +12,7 @@ source:
   sha256: '{{ hash_value }}'
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install . --no-deps --ignore-installed
 
 requirements:
