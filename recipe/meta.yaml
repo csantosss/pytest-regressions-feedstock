@@ -1,34 +1,31 @@
 {% set name = "pytest-regressions" %}
-{% set version = "1.0.6" %}
-{% set hash_value = "14165dd7a452f0637083855f67aafe6afa61013a541efd2dedc98b7da5dd3970" %}
+{% set version = "2.0.0" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: '{{ hash_value }}'
+  sha256: "38972758b6e62058df79bc8480d3e0f4134bb0be848c135d4840f3ebebb63985"
 
 build:
+  noarch: python
   number: 0
-  script: python -m pip install . --no-deps --ignore-installed
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - pip
-    - python
+    - python >=3.6
     - setuptools
     - setuptools_scm
 
   run:
-    - pathlib2  # [py27]
     - pytest >=3.5.0
     - pytest-datadir >=1.2.0
-    - python
+    - python >=3.6
     - pyyaml
-    - six
 
 test:
   requires:
