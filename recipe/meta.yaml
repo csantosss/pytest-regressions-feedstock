@@ -17,14 +17,14 @@ build:
 requirements:
   build:
     - pip
-    - python
+    - python >=3.6
     - setuptools
     - setuptools_scm
 
   run:
     - pytest >=3.5.0
     - pytest-datadir >=1.2.0
-    - python
+    - python >=3.6
     - pyyaml
 
 test:
